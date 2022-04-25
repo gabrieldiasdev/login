@@ -1,0 +1,248 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+body section{
+    width: 50%;
+    height: 100%;
+}
+
+.img_section{
+    background-color: var(--white300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_section img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    transition: all 1s ease;
+}
+
+.main_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* signin Form */
+
+.main_section .signin_form, .main_section .signup_form, .main_section .resetPassword_form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 350px;
+    transition: 1s ease opacity;
+}
+
+.main_section .signin_form header, .main_section .signup_form header, .main_section .resetPassword_form header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    padding-bottom: 39px;
+}
+
+.main_section .signin_form header p, .main_section .signup_form header p{
+    font-family: var(--font-merriweather);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 20px;
+    color: var(--dark);
+}
+
+.main_section .signin_form header h3 , .main_section .signup_form header h3, .main_section .resetPassword_form header h3{
+    font-family: var(--font-merriweather);
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 33px;
+    color: var(--dark);
+}
+
+.main_section .signin_form form, .main_section .signup_form form, .main_section .resetPassword_form form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    width: 100%;
+}
+
+.main_section .signin_form form label, .main_section .signup_form form label, .main_section .resetPassword_form form label{
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 19.2px;
+    color: var(--dark);
+}
+
+.main_section .signin_form form input, .main_section .signup_form form input, .main_section .resetPassword_form form input{
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 17px;
+    color: var(--dark);
+    outline: none;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--input);
+    border-radius: 5px;
+    padding: 17px 20px;
+}
+
+.main_section .signin_form form input::placeholder, .main_section .signup_form form input::placeholder, .main_section .resetPassword_form form input::placeholder{
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 17px;
+}
+
+.main_section .signin_form form div{
+    padding-top: 17px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_section .signin_form form div label{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;
+    white-space: nowrap;
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 17px;
+    color: var(--dark);
+}
+
+.main_section .signin_form form div label input{
+    position: relative;
+	all: unset;
+	display: grid;
+	place-items: center;
+	height: 15px;
+	width: 15px;
+	background: var(--white300);
+	border-radius:50%;
+	border: 1px solid var(--input);
+    cursor: pointer;
+}
+
+.main_section .signin_form form div label input:checked::after{
+    content: '';
+	position: absolute;
+	height: 11px;
+	width: 11px;
+	border-radius: 50%;
+	background: var(--green);
+}
+
+.main_section .signin_form form div a{
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 17px;
+    color: var(--blue);
+}
+
+.main_section .signin_form form footer, .main_section .signup_form form footer, .main_section .resetPassword_form form footer{
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main_section .signin_form form footer button, .main_section .signup_form form footer button, .main_section .resetPassword_form form footer button{
+    font-family: var(--font-lato);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--white);
+    line-height: 19px;
+    width: 99%;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.main_section .signin_form form footer button:hover, .main_section .signup_form form footer button:hover, .main_section .resetPassword_form form footer button:hover{
+    opacity: .9;
+}
+
+.main_section .signin_form form footer .enter_button{
+    background: var(--green);
+}
+
+.main_section .signin_form form footer .google_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    background: var(--dark);
+}
+
+.main_section .signin_form .no_account, .main_section .signup_form .no_account, .main_section .resetPassword_form .no_account{
+    align-self: center;
+    padding-top: 162px;
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 19px;
+    color: var(--dark);
+}
+
+.main_section .signin_form .no_account a, .main_section .signup_form .no_account a, .main_section .resetPassword_form .no_account a{
+    color: var(--blue);
+}
+
+.main_section .signin_form .no_account a:hover, .main_section .signup_form .no_account a:hover, .main_section .resetPassword_form .no_account a:hover{
+    text-decoration: underline;
+}
+
+/* Sigup Form */
+
+.main_section .signup_form, .main_section .resetPassword_form{
+    display: none;
+    opacity: 0;
+}
+
+.main_section .signup_form form footer .signup_button, .main_section .resetPassword_form form footer .resetPassword_button{
+    background: var(--blue);
+}
+
+
+
+/* Responsividade */
+
+@media screen and (max-height: 768px){
+    .main_section .signin_form .no_account, .main_section .signup_form .no_account{
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .img_section img{
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    .img_section{
+        display: none;
+    }
+    .main_section{
+        width: 100%;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+		<meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/variables.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Login</title>
+	</head>
+    <body>
+        <section class="img_section">
+			<img src="assets/img/image.svg" alt="Imagem ilustrativa">
+		</section>
+		<section class="main_section">
+			<div class="signin_form" id="signin_form">
+				<header>
+					<p>Bem vindo de volta</p>
+					<h3>Faça login na sua conta</h3>
+				</header>
+				<form onsubmit="handleFormloginSubmit(event);">
+					<label for="email">E-mail</label>
+					<input type="email" id="email" name="email" placeholder="codelandia@gmail.com">
+
+					<label for="password">Senha</label>
+					<input type="password" id="password" name="password" placeholder="*********">
+
+					<div>
+						<label for="remeber">
+							Lembre de mim 
+							<input type="checkbox" id="remember">
+						</label>
+
+						<a href="javascript:void(0);">Esqueceu sua senha? </a>
+					</div>
+					<footer>
+						<button type="submit" class="enter_button">Entrar</button>
+						<button type="button" onclick="handleFormGoogleLoginSubmit(event);" class="google_button">
+							<img src="assets/img/google_icon.svg" alt="Icone do google">
+							Ou faça login com o Google 
+						</button>
+					</footer>
+				</form>
+				<p class="no_account">Não tem uma conta? <a href="javascript:void(0);" onclick="handleFormChange(event);">Cadastre-se</a></p>
+			</div>
+			<div class="signup_form" id="signup_form">
+				<header>
+					<p>Bem vindo</p>
+					<h3>Cadastre sua conta</h3>
+				</header>
+				<form onsubmit="handleFormRegisterSubmit(event);">
+					<label for="email_signup">E-mail</label>
+					<input type="email" id="email_signup" placeholder="codelandia@gmail.com">
+
+					<label for="password_signup">Senha</label>
+					<input type="password" id="password_signup" placeholder="*********">
+
+					<label for="confirmPassword_signup">Confirmar senha</label>
+					<input type="password" id="confirmPassword_signup" placeholder="*********">
+
+					<footer>
+						<button type="submit" class="signup_button">Cadastrar</button>
+					</footer>
+				</form>
+				<p class="no_account">Já possui uma conta? <a href="javascript:void(0);" onclick="handleFormChange(event);">Logar</a></p>
+			</div>
+		</section>
+		<script src="https://unpkg.com/@supabase/supabase-js"></script>
+		<script defer src="js/script.js"></script>
+    </body>
+</html>
